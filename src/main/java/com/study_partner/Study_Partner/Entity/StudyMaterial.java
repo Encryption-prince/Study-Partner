@@ -17,7 +17,7 @@ public class StudyMaterial {
     private UUID id;
 
     private String title;
-    private String url;               // Link to the document (Google Drive / S3 / etc.)
+    private String url; // Link to the document (Google Drive / S3 / etc.)
     private String subject;
     private String semester;
     private String fileType;
@@ -27,6 +27,7 @@ public class StudyMaterial {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    @Builder.Default
     private LocalDateTime uploadedAt = LocalDateTime.now();
 
 }

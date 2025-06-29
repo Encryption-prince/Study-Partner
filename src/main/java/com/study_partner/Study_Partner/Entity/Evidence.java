@@ -22,6 +22,7 @@ public class Evidence {
 
     private String fileUrl;
 
+    @Builder.Default
     private LocalDateTime uploadedAt = LocalDateTime.now();
 
     @ManyToOne

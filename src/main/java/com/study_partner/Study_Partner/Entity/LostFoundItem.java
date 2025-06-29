@@ -16,7 +16,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-
 @Data
 @Entity
 @AllArgsConstructor
@@ -43,6 +42,7 @@ public class LostFoundItem {
 
     private String reporterContact; // optional (email/phone) for internal contact
 
+    @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
 
     public enum Status {

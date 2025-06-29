@@ -32,10 +32,12 @@ public class RaggingReport {
     private String description;
 
     private boolean reportAsSelf;
+    @Builder.Default
     private String status = "PENDING";
 
+    @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
-    private LocalDateTime updatedAt;  // <-- ✅ add this line
+    private LocalDateTime updatedAt; // <-- ✅ add this line
 
     @OneToMany(mappedBy = "report", cascade = CascadeType.ALL)
     private List<InvolvedPerson> involvedPersons;
@@ -49,4 +51,3 @@ public class RaggingReport {
     private String severityLevel;
 
 }
-
